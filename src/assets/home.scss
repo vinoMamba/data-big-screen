@@ -3,13 +3,19 @@
 .home-wrap {
   display: flex;
   flex-direction: column;
-  background-color: brown;
+  background-color: #0c111a;
   width: 100%;
   height: px(1080);
   background-size: cover;
 
   .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: px(80);
+    font-size: px(38);
+    font-weight: 600;
+    color: #00FFFF;
   }
 
   .content {
@@ -23,39 +29,54 @@
     grid-column-gap: px(16);
     grid-row-gap: px(16);
 
+    > section {
+      border: 1px solid #29FFE6;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 0 2px 0 #00FFFF, inset 0 0 2px 0 #00FFFF;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #1AC9FF,
+        -11px 0 0 -10px #1AC9FF,
+        0 11px 0 -10px #1AC9FF,
+        0 -11px 0 -10px #1AC9FF;
+
+      }
+    }
+
     .section1 {
       grid-area: box1;
-      background-color: palegoldenrod;
     }
 
     .section2 {
       grid-area: box2;
-      background-color: violet;
     }
 
     .section3 {
       grid-area: box3;
-      background-color: pink;
     }
 
     .section4 {
       grid-area: box4;
-      background-color: palegoldenrod;
     }
 
     .section5 {
       grid-area: box5;
-      background-color: gray;
     }
 
     .section6 {
       grid-area: box6;
-      background-color: indianred;
     }
 
     .section7 {
       grid-area: box7;
-      background-color: lavender;
     }
   }
 }

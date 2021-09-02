@@ -5,7 +5,7 @@ import "../assets/home.scss";
 export const Home = () => {
     return (
         <div className="home-wrap" style={{backgroundImage: `url(${image})`}}>
-            <div className="header"></div>
+            <div className="header">战狼智慧安全</div>
             <div className="content">
                 <section className="section1"></section>
                 <section className="section2"></section>
