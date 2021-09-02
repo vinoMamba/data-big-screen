@@ -1,7 +1,61 @@
 @import "helper";
 
 .home-wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
   width: 100%;
   height: px(1080);
   background-size: cover;
+
+  .header {
+    height: px(80);
+  }
+
+  .content {
+    padding: px(24);
+    flex-grow: 1;
+    display: grid;
+    grid-template:
+            "box1 box2 box5" 755fr
+            "box1 box2 box6" 563fr
+            "box3 box4 box7" 563fr / 748fr 811fr 747fr;
+    grid-column-gap: px(16);
+    grid-row-gap: px(16);
+
+    .section1 {
+      grid-area: box1;
+      background-color: palegoldenrod;
+    }
+
+    .section2 {
+      grid-area: box2;
+      background-color: violet;
+    }
+
+    .section3 {
+      grid-area: box3;
+      background-color: pink;
+    }
+
+    .section4 {
+      grid-area: box4;
+      background-color: palegoldenrod;
+    }
+
+    .section5 {
+      grid-area: box5;
+      background-color: gray;
+    }
+
+    .section6 {
+      grid-area: box6;
+      background-color: indianred;
+    }
+
+    .section7 {
+      grid-area: box7;
+      background-color: lavender;
+    }
+  }
 }
