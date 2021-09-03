@@ -3,7 +3,7 @@ import * as echarts from "echarts";
 import {px} from "../helper";
 import {baseEchartOptions} from "../helper/baseEchartOptions";
 
-export const FlightCheck = () => {
+export const FlightVideoCheck = () => {
     const divRef = useRef(null);
     useEffect(() => {
         const myChart = echarts.init(divRef.current!);
@@ -53,7 +53,7 @@ export const FlightCheck = () => {
     }, []);
     return (
         <div className="bordered flight-check">
-            <h4>飞行检查</h4>
+            <h4>飞行视频检查</h4>
             <div ref={divRef} className="chart"></div>
         </div>
     );

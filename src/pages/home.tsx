@@ -1,7 +1,8 @@
-import React, {useEffect, useRef} from "react";
-import image from "../assets/img/bg.png";
+import React from "react";
+import image from "../assets/img/bg.jpg";
 import "../assets/home.scss";
 import {FlightCheck} from "../components/FlightCheck";
+import {FlightVideoCheck} from "../components/FlightVideoCheck";
 
 export const Home = () => {
     return (
@@ -13,10 +14,13 @@ export const Home = () => {
                 <section className="section3">
                     <FlightCheck/>
                 </section>
-                <section className="section4 bordered"></section>
+                <section className="section4">
+                </section>
                 <section className="section5 bordered"></section>
                 <section className="section6 bordered"></section>
-                <section className="section7 bordered"></section>
+                <section className="section7">
+                    <FlightVideoCheck/>
+                </section>
             </div>
         </div>
     );
