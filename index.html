@@ -8,7 +8,7 @@
     <script>
         const screenWidth = document.documentElement.clientWidth
         const screenHeight = document.documentElement.clientHeight
-        const pageWidth = screenWidth / screenHeight > 16 / 9 ? screenHeight * (16 / 9) : screenWidth;
+        window.pageWidth = screenWidth / screenHeight > 16 / 9 ? screenHeight * (16 / 9) : screenWidth;
         const pageHeight = pageWidth * (9 / 16)
         const string = `<style>html{
             font-size: ${pageWidth / 100}px

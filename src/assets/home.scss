@@ -12,24 +12,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: px(80);
+    height: px(95);
     font-size: px(38);
     font-weight: 600;
     color: #00FFFF;
   }
 
   .content {
-    padding: px(24);
+    padding: px(48) px(24);
     flex-grow: 1;
     display: grid;
     grid-template:
             "box1 box2 box5" 755fr
-            "box1 box2 box6" 563fr
+            "box1 box2 box6" 450fr
             "box3 box4 box7" 563fr / 748fr 811fr 747fr;
-    grid-column-gap: px(16);
-    grid-row-gap: px(16);
+    grid-column-gap: px(14);
+    grid-row-gap: px(14);
 
-    > section {
+    .bordered {
       border: 1px solid #29FFE6;
       border-radius: 4px;
       position: relative;
@@ -77,6 +77,19 @@
 
     .section7 {
       grid-area: box7;
+    }
+  }
+
+  .flight-check {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      padding: 0 px(12);
+    }
+
+    .chart {
+      height: px(243);
     }
   }
 }
