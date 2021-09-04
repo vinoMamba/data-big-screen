@@ -3,6 +3,7 @@ import image from "../assets/img/bg.jpg";
 import "../assets/home.scss";
 import {FlightCheck} from "../components/FlightCheck";
 import {FlightVideoCheck} from "../components/FlightVideoCheck";
+import {ChinaMap} from "../components/ChinaMap";
 
 export const Home = () => {
     return (
@@ -10,7 +11,9 @@ export const Home = () => {
             <div className="header">战狼智慧安全</div>
             <div className="content">
                 <section className="section1 bordered"></section>
-                <section className="section2 bordered"></section>
+                <section className="section2">
+                    <ChinaMap/>
+                </section>
                 <section className="section3">
                     <FlightCheck/>
                 </section>
