@@ -92,4 +92,17 @@
       height: px(243);
     }
   }
+
+  .flight-video-check {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      padding: 0 px(12);
+    }
+
+    .video-chart {
+      height: px(243);
+    }
+  }
 }

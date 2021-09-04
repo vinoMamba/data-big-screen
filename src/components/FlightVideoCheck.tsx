@@ -2,34 +2,33 @@ import React, {useEffect, useRef} from "react";
 import * as echarts from "echarts";
 import {px} from "../helper";
 import {baseEchartOptions} from "../helper/baseEchartOptions";
+import {createEchartOptions} from "../helper/createEchartOptions";
 
 export const FlightVideoCheck = () => {
-    const divRef = useRef(null);
+    const videoDivRef = useRef(null);
     useEffect(() => {
-        const myChart = echarts.init(divRef.current!);
+        const myChart = echarts.init(videoDivRef.current!);
         const option = {
             ...baseEchartOptions,
+        };
+        myChart.setOption(createEchartOptions({
             xAxis: {
-                data: ['9月10日', '9月11日', '9月12日', '9月13日', '9月14日', '9月15日', '9月16日', '9月17日'],
+                type: "value",
                 axisTick: {show: true},
                 axisLine: {
-                    lineStyle: {color: '#29FFE6'}
+                    lineStyle: {color: "#29FFE6"}
                 },
                 axisLabel: {
                     fontSize: px(12),
                 },
             },
-            grid: {
-                x: px(40),
-                y: px(40),
-                x2: px(40),
-                y2: px(40),
-            },
             yAxis: {
+                type: "category",
+                data: ["0910", "0911", "0912", "0913", "0914", "0915", "0916"],
                 splitLine: {show: false},
                 axisLine: {
                     show: true,
-                    lineStyle: {color: '#29FFE6'}
+                    lineStyle: {color: "#29FFE6"}
                 },
                 axisLabel: {
                     fontSize: px(12)
@@ -37,24 +36,38 @@ export const FlightVideoCheck = () => {
             },
             series: [
                 {
-                    type: 'bar',
-                    data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
-                    color: '#29FFE6'
+                    name: "已参与",
+                    type: "bar",
+                    stack: "total",
+                    label: {
+                        show: true
+                    },
+                    emphasis: {
+                        focus: "series"
+                    },
+                    data: [32, 30, 30, 33, 39, 33, 32],
+                    color: "#29FFE6"
                 },
-
                 {
-                    type: 'bar',
-                    data: [8, 15, 34, 38, 12, 20, 23, 15, 24],
-                    color: '#FC664F'
-                }
+                    name: "未参与",
+                    type: "bar",
+                    stack: "total",
+                    label: {
+                        show: true
+                    },
+                    emphasis: {
+                        focus: "series"
+                    },
+                    data: [12, 13, 10, 13, 9, 23, 21],
+                    color: "#FC664F"
+                },
             ]
-        };
-        myChart.setOption(option);
+        }));
     }, []);
     return (
-        <div className="bordered flight-check">
+        <div className="bordered flight-video-check">
             <h4>飞行视频检查</h4>
-            <div ref={divRef} className="chart"></div>
+            <div ref={videoDivRef} className="video-chart"/>
         </div>
     );
 };
