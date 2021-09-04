@@ -14,8 +14,7 @@ export const Home = () => {
                 <section className="section3">
                     <FlightCheck/>
                 </section>
-                <section className="section4">
-                </section>
+                <section className="section4"></section>
                 <section className="section5 bordered"></section>
                 <section className="section6 bordered"></section>
                 <section className="section7">
