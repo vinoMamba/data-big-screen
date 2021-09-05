@@ -30,7 +30,7 @@
     grid-template:
             "box1 box2 box5" 755fr
             "box1 box2 box6" 450fr
-            "box3 box4 box7" 563fr / 748fr 811fr 747fr;
+            "box3 box4 box7" 563fr / 548fr 811fr 747fr;
     grid-column-gap: px(14);
     grid-row-gap: px(14);
 
@@ -86,7 +86,7 @@
     }
   }
 
-  .flight-check, .flight-video-check, .map-wrapper {
+  .flight-check, .flight-video-check, .map-wrapper, .attendance-wrap {
     display: flex;
     flex-direction: column;
 
@@ -98,7 +98,7 @@
       height: px(243);
     }
 
-    .map {
+    .map, .attendance {
       height: px(550);
     }
   }

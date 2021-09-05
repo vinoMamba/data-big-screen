@@ -6,6 +6,8 @@
 }
 
 table {
+  user-select: none;
+  cursor: pointer;
   position: relative;
   margin: 0 px(16);
   display: flex;
