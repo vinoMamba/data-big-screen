@@ -1,11 +1,10 @@
 import React, {useEffect, useRef} from "react";
 import * as echarts from "echarts";
 import china from "../helper/china.json";
+import {series} from "../helper/geo";
 
 export const ChinaMap = () => {
     const divRef = useRef(null);
-
-
     useEffect(() => {
         const myChart = echarts.init(divRef.current!);
         // @ts-ignore
@@ -14,7 +13,7 @@ export const ChinaMap = () => {
             geo: {
                 map: "CN",
                 roam: true,
-                label: {show: true, color: "white"},
+                label: {show: false, color: "white"},
                 itemStyle: {
                     normal: {
                         borderWidth: 1,
@@ -49,8 +48,9 @@ export const ChinaMap = () => {
                             color: "white"
                         }
                     }
-                ]
+                ],
             },
+            series
         });
     }, []);
     return (
