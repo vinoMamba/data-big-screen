@@ -4,6 +4,7 @@ import "../assets/home.scss";
 import {FlightCheck} from "../components/FlightCheck";
 import {FlightVideoCheck} from "../components/FlightVideoCheck";
 import {ChinaMap} from "../components/ChinaMap";
+import {Complaints} from "../components/Complaints";
 
 export const Home = () => {
     return (
@@ -17,7 +18,9 @@ export const Home = () => {
                 <section className="section3">
                     <FlightCheck/>
                 </section>
-                <section className="section4"></section>
+                <section className="section4">
+                   <Complaints/>
+                </section>
                 <section className="section5 bordered"></section>
                 <section className="section6 bordered"></section>
                 <section className="section7">
