@@ -31,7 +31,7 @@ export const ChinaMap = () => {
                         name: "广东",
                         itemStyle: {
                             areaColor: "#28f6de",
-                            color: "white"
+                            color: "white",
                         }
                     },
                     {

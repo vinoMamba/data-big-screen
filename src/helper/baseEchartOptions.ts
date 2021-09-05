@@ -16,8 +16,11 @@ export const baseEchartOptions = {
     legend: {
         data: ["已参与", "未参与"],
         textStyle: {
-            color: "white"
-        }
+            color: "white",
+            fontSize: px(14)
+        },
+        itemWidth: px(25),
+        itemHeight: px(14)
     },
     grid: {
         x: px(40),

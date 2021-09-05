@@ -1,3 +1,5 @@
+import {px} from "./index";
+
 interface GeoCoordMap {
     [key: string]: [number, number]
 }
@@ -126,7 +128,7 @@ export const BJData: CityDataItem[] = [
     [{name: "合肥"}, {name: "大连", value: 80}],
     [{name: "合肥"}, {name: "南宁", value: 70}],
     [{name: "合肥"}, {name: "南昌", value: 60}],
-    [{name: "合肥"}, {name: "拉萨", value: 50}],
+    [{name: "合肥"}, {name: "拉萨", value: 90}],
     [{name: "合肥"}, {name: "长春", value: 40}],
     [{name: "合肥"}, {name: "包头", value: 30}],
     [{name: "合肥"}, {name: "重庆", value: 20}],
@@ -148,7 +150,7 @@ export const convertData = function (data: CityDataItem[]) {
             res.push({
                 fromName: item[0].name,
                 toName: item[1].name,
-                coords: [fromCoord, toCoord]
+                coords: [fromCoord, toCoord],
             });
         }
     });
@@ -164,7 +166,7 @@ export const series = [
             period: 6,
             trailLength: 0.7,
             color: "#fff",
-            symbolSize: 3
+            symbolSize: px(3)
         },
         lineStyle: {
             normal: {
@@ -180,13 +182,13 @@ export const series = [
         type: "lines",
         zlevel: 2,
         symbol: ["none", "arrow"],
-        symbolSize: 10,
+        symbolSize: px(12),
         effect: {
             show: true,
             period: 6,
             trailLength: 0,
             symbol: planePath,
-            symbolSize: 15
+            symbolSize: px(15)
         },
         lineStyle: {
             color: "#46bee9",
@@ -206,6 +208,7 @@ export const series = [
         },
         label: {
             show: true,
+            fontSize: px(14),
             position: "right",
             formatter: "{b}"
         },
@@ -213,7 +216,7 @@ export const series = [
             return val[2] / 8;
         },
         itemStyle: {
-            color: "#46bee9"
+            color: "#46bee9",
         },
         data: (BJData).map(function (dataItem) {
             return {

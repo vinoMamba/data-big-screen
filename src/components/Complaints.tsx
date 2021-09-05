@@ -16,7 +16,7 @@ export const Complaints = () => {
                     <th>处理进度</th>
                 </tr>
                 </thead>
-                <tbody className="table-body">
+                <tbody className="table-body-wrap">
                 {tableData.map(item => {
                     return (
                         <tr className="table-item" key={item.id}>
