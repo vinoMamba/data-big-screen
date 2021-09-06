@@ -1,5 +1,5 @@
 import React from "react";
-import {tableData} from "../helper/tableData";
+import {tableData} from "../data/tableData";
 import "../assets/table.scss";
 
 export const Complaints = () => {

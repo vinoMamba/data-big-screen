@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import * as echarts from "echarts";
-import china from "../helper/china.json";
+import china from "../data/china.json";
 import {series} from "../helper/geo";
 
 export const ChinaMap = () => {

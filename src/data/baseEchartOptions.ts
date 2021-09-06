@@ -1,4 +1,4 @@
-import {px} from "./index";
+import {px} from "../helper";
 
 export const baseEchartOptions = {
     textStyle: {
