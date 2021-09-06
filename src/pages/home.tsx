@@ -6,6 +6,8 @@ import {FlightVideoCheck} from "../components/FlightVideoCheck";
 import {ChinaMap} from "../components/ChinaMap";
 import {Complaints} from "../components/Complaints";
 import {Attendance} from "../components/Attendance";
+import {Monitoring} from "../components/Monitoring";
+import {Chart1} from "../components/Chart-1";
 
 export const Home = () => {
     return (
@@ -24,8 +26,12 @@ export const Home = () => {
                 <section className="section4">
                     <Complaints/>
                 </section>
-                <section className="section5 bordered"></section>
-                <section className="section6 bordered"></section>
+                <section className="section5">
+                    <Monitoring/>
+                </section>
+                <section className="section6">
+                    <Chart1/>
+                </section>
                 <section className="section7">
                     <FlightVideoCheck/>
                 </section>

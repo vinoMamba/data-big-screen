@@ -34,7 +34,13 @@ export const FlightCheck = () => {
                     name: "已参与",
                     type: "bar",
                     data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
-                    color: "#29FFE6",
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: "#206084"
+                    }, {
+                        offset: 1,
+                        color: "#29FFE6"
+                    }]),
                     label: {
                         show: true
                     },
@@ -44,7 +50,13 @@ export const FlightCheck = () => {
                     name: "未参与",
                     type: "bar",
                     data: [8, 15, 34, 38, 12, 20, 23, 15, 24],
-                    color: "#FC664F",
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: "#29FFE6"
+                    }, {
+                        offset: 1,
+                        color: "#FC664F"
+                    }]),
                     label: {
                         show: true
                     },

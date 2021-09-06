@@ -86,7 +86,7 @@
     }
   }
 
-  .flight-check, .flight-video-check, .map-wrapper, .attendance-wrap {
+  .flight-check, .flight-video-check, .map-wrapper, .attendance-wrap, .monitor-wrap, .chart-wrap {
     display: flex;
     flex-direction: column;
 
@@ -98,9 +98,56 @@
       height: px(243);
     }
 
+    .chart1 {
+      height: px(180);
+    }
+
     .map, .attendance {
       height: px(550);
     }
+
+    .monitor {
+      height: px(200);
+    }
   }
 
+  .monitor-wrap {
+    div {
+      height: px(100);
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: px(16);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: px(16);
+        background-color: rgba(252, 127, 4, 0.2);
+        border: 1px solid #F8B92D;
+        box-shadow: 0 0 2px 0 rgba(252, 127, 4, 1), inset 0 0 2px 0 rgba(252, 127, 4, 1);
+
+        &::before {
+          pointer-events: none;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          box-shadow: 17px 0 0 -16px #f0e203,
+          -11px 0 0 -10px #f0e203,
+          0 11px 0 -10px #f0e203,
+          0 -11px 0 -10px #f0e203;
+        }
+
+        span {
+          color: #F8B92D;
+        }
+      }
+    }
+  }
 }
