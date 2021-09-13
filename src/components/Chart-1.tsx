@@ -8,6 +8,12 @@ export const Chart1 = () => {
     useEffect(() => {
         const myChart = echarts.init(divRef.current!);
         myChart.setOption(createEchartOptions({
+            grid: {
+                x: px(50),
+                y: px(40),
+                x2: px(40),
+                y2: px(40),
+            },
             xAxis: {
                 type: "category",
                 boundaryGap: false,

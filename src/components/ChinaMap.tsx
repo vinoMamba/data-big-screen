@@ -57,6 +57,7 @@ export const ChinaMap = () => {
         <div className="map-wrapper">
             <h4>战狼集团业务覆盖区域</h4>
             <div ref={divRef} className="map"/>
+            <p>此地图仅显示了中国的部分区域</p>
         </div>
     );
 };
