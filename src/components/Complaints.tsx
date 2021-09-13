@@ -23,7 +23,7 @@ export const Complaints = () => {
                             <td>{item.provinces}</td>
                             <td>{item.name}</td>
                             <td>{item.orderNumber}</td>
-                            <td>{item.process}</td>
+                            <td>{item.process}%</td>
                         </tr>
                     );
                 })}
